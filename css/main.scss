@@ -1,0 +1,392 @@
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 10%;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+$primary-color: #D5333E !important; //Red
+$secondary-color: #ba2630 !important; //Orange
+
+// ==========================
+//  GENERAL
+// ==========================
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  // scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  scroll-snap-align: center;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  align-items: center!important;
+  justify-content: center!important;
+}
+
+h4,
+h5,
+h6 {
+  font-family: 'DM Serif Display', sans-serif;
+}
+
+h1 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+h2 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 3rem;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: white;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+  color: white;
+}
+
+.bg-secondary {
+  background-color: white !important;
+  color: $primary-color;
+}
+
+.btn-primary {
+  color: white;
+  background-color: $primary-color;
+  border-radius: 5px;
+  width: 100px;
+  transition: all 0.4s ease 0s;
+  border: 1px solid white;
+
+  &:hover {
+    color: white;
+    background-color: $secondary-color;
+    border: 1px solid white;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+  }
+}
+
+hr.left {
+  position: relative;
+  border: 2px solid white;
+  width: 15%;
+  margin-left: 0;
+  border-radius: 5px;
+}
+
+hr.right {
+  position: relative;
+  border: 2px solid white;
+  width: 15%;
+  margin-right: 0;
+  border-radius: 5px;
+}
+
+// ==========================
+//  END GENERAL
+// ==========================
+
+
+// ==========================
+//  NAV
+// ==========================
+
+nav {
+  border-bottom: 1px #D5333E solid;
+}
+
+nav li {
+  display: inline-block;
+  padding: 24px 10px;
+
+  .active {
+    color: black;
+  }
+}
+
+nav li a {
+  color: $primary-color;
+  text-transform: uppercase;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.nav-link {
+  padding: 0 !important;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+nav .social-link {
+ display: inline-block;
+ height: 4rem;
+ width: 4rem;
+ line-height: 4.3rem;
+ text-align: center;
+ font-size: 1.5rem;
+ color: $primary-color;
+ transition: all 0.3s ease 0s;
+
+ .fab:hover {
+   color: $secondary-color;
+   text-decoration: none;
+   transition: all 0.3s ease 0s;
+   transform: scale(1.101);
+ }
+
+}
+
+.toggle-button {
+  padding: 25px;
+  border-left: 1px #D5333E solid;
+  border-right: 1px #D5333E solid;
+  transition: 0.3;
+  cursor: pointer;
+}
+
+.toggle-button .fa-bars {
+  transition: 0.3s;
+}
+
+.toggle-button:hover .fa-bars{
+  color: $secondary-color;
+  transition: 0.3s;
+  transform: scale(0.95);
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1040; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #fff; /* white*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  border-right: 1px #D5333E solid;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  border-bottom: 1px transparent solid;
+  color: $primary-color;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 5px;
+  line-height: 2em;
+}
+
+.sidenav a:after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #D5333E;
+  width: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.sidenav-links a:hover:after {
+  margin-left: 2rem;
+  width: 60%;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidenav .closebtn:hover {
+  color: $secondary-color;
+  transform: scale(0.9);
+}
+
+// ==========================
+//  END NAV
+// ==========================
+
+
+// ==========================
+//  HERO
+// ==========================
+
+.hero-text {
+  padding: 1rem;
+}
+
+
+// ==========================
+//  END HERO
+// ==========================
+
+
+// ==========================
+//  ABOUT
+// ==========================
+
+
+// ==========================
+//  END ABOUT
+// ==========================
+
+// ==========================
+//  PORTFOLIO
+// ==========================
+
+.portfolio-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.card {
+  background-color: transparent;
+  border: 0px;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+// ==========================
+//  END Portfolio
+// ==========================
+
+// ==========================
+//  Contact
+// ==========================
+
+.contact-section {
+  min-height: 40vh;
+}
+
+// ==========================
+//  END Contact
+// ==========================
+
+// ==========================
+//   FOOTER
+// ==========================
+
+footer.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+// social-links in footer
+footer .social-link {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: $primary-color;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $secondary-color;
+    text-decoration: none;
+  }
+
+  &:hover > i {
+    transition: 0.3s;
+    transform: scale(1.101);
+  }
+}
+
+.social-link i {
+    transition: 0.3s;
+}
+
+// ==========================
+//  END FOOTER
+// ==========================
+
+@media (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  #portfolio img {
+    float: none !important;
+  }
+  .center {
+    text-align: center;
+  }
+  .left {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+
+}
