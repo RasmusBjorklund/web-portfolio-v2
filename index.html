@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Offline Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"> -->
+
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/main.min.css">
+
+  <!-- Custom CSS and Vendor-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/animate-css/animate.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Varela+Round" rel="stylesheet" type="text/css">
+
+
+  <!-- Favicon -->
+  <link href="img/favicon.jpg" rel="icon">
+
+  <title>Rasmus Björklund</title>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+  <!-- <div id="preloader">
+    <h2>Welcome!</h2>
+  </div> -->
+
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sidenav-links">
+      <a href="#hero" onclick="closeNav()">Home</a>
+      <a href="About.html">About me</a>
+      <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+      <a href="#contact" onclick="closeNav()">Contact me</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar bg-secondary fixed-top p-0" id="navbar">
+    <ul class="container mb-0">
+      <div onclick="openNav()" class="mr-auto toggle-button">
+        <span><i class="fas fa-bars fa-lg"></i></span>
+      </div>
+      <div class="ml-auto">
+        <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/rasmus-bj%C3%B6rklund-6b985a179/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="social-link rounded-circle text-white mr-3" href="https://github.com/RasmusBjorklund">
+          <i class="fab fa-github"></i></a>
+        </a>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="bg-secondary d-flex">
+    <div class="hero-text">
+      <h1>I'm Rasmus,<br>
+        <span class="animated rotating"> A web Developer, A Graphic Designer</span></h1>
+    </div>
+    <div class="b-0">
+    </div>
+    <!-- <img src="img/red.svg" alt="Red Ball"> -->
+  </section>
+
+  <!-- Showcase -->
+  <section class="bg-primary" id="portfolio">
+    <div class="container">
+      <h2 class="mb-5">Portfolio</h2>
+      <div class="row">
+
+        <div class="col-md-6">
+          <img src="img/brimston.png" class="portfolio-img float-left" alt="">
+        </div>
+        <div class="col-md-6 center">
+          <h3>Brimston Burgers</h3>
+          <hr class="left">
+          <p>A school assignment to create a made
+            up company and also create a website
+            based on the company.
+            Most focus on design aspect.</p>
+          <a href="#" class="btn btn-primary mb-1">Code</a>
+          <a href="#" class="btn btn-primary mb-1">Demo</a>
+        </div>
+
+        <div class="col-md-6 mt-5">
+          <img src="img/whatstheweather.png" class="portfolio-img float-left" alt="">
+        </div>
+
+        <div class="col-md-6 center">
+          <h3>What's The Weather</h3>
+          <hr class="left">
+          <p>A website built using HTML, CSS and plain JavaScript.
+            With help of openweathermap.org rest API.</p>
+          <a href="#" class="btn btn-primary mb-1">Code</a>
+          <a href="#" class="btn btn-primary mb-1">Demo</a>
+        </div>
+      </div>
+      <div class="mt-5 text-center">
+        <a href="#" class="btn btn-primary">See More</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-secondary contact-section" id="contact">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Contact Me</h2>
+        <p>Down below you'll find a form for contacting me about questions and work opportunities</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form action="sendMail.php" method="post">
+        <div class="form" style="margin:0;">
+          <div class="form-row">
+
+            <!-- Full name -->
+            <div class="col-md-6 mb-3">
+              <label for="name">Full name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter full name" name="user_name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6 mb-3">
+              <label for="mail">Email Adress</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="email" class="form-control" id="mail" placeholder="Enter Email" aria-describedby="inputGroupPrepend" name="user_email" srequired>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="col-md-6 mb-3 pl-0">
+            <label for="msg">Message</label>
+            <textarea class="form-control" id="msg" placeholder="Enter your wonderful message!" name="user_message" rows="5"></textarea>
+          </div>
+
+        </div>
+        <!-- Submit button -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center" id="footer">
+    <div class="container">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white m-3" href="https://www.linkedin.com/in/rasmus-bj%C3%B6rklund-6b985a179/" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white m-3" href="cv.pdf" target="_blank" data-toggle="tooltip" data-placement="top" title="CV">
+            <i class="fas fa-file-alt"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white m-3" href="https://github.com/RasmusBjorklund" data-toggle="tooltip" data-placement="top" title="Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; Rasmus Björklund 2019</p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="css/bootstrap/js/bootstrap.js">
+
+  </script>
+  <!-- Custom Script -->
+  <script src="js/morphext.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/toggleNav.js">
+  </script>
+</body>
+
+</html>
